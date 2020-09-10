@@ -27,5 +27,5 @@ probability of generating late voluntary prosaccades.
 10/11 - PS trial left/right
 12/13 - AS trial left/right
 
-![GitHub Logo](/images/logo.png)
+![GitHub Logo](/Pictures/triggers.png)
 Format: ![Alt Text](url)
