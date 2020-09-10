@@ -25,6 +25,34 @@ probability of generating late voluntary prosaccades.
 ######  (C) The sequence of latent events assumed by the Stochastic Early Reaction, Inhibition and Late Action (SERIA) Model, generating as output either early prosaccades (EARLY PRO), late prosaccades (LATE PRO), or antisaccade events (LATE ANTI).
 
 
+
+Neuropsychological studies indicate that healthy aging is associated with a decline of
+inhibitory control of attentional and behavioral systems. A widely accepted measure of
+inhibitory control is the antisaccade task that requires both the inhibition of a reflexive
+saccadic response towards a visual target and the initiation of a voluntary eye movement in
+the opposite direction. To better understand the nature of age-related differences in inhibitory
+ control, we evaluated antisaccade task performance in 78 younger (20-35 years) and 78 older
+(60-80 years) participants. In order to provide reliable estimates of inhibitory control for
+individual subjects, we investigated test-retest reliability of the reaction time, error rate,
+saccadic gain and peak saccadic velocity and further estimated latent, not directly observable
+processed contributing to changes in the antisaccade task execution. The Intraclass
+Correlation Coefficients for an older group of participants emerged as good to excellent for
+most of our antisaccade task measures. Furthermore, using Bayesian multivariate models, we
+inspected age-related differences in the performances of healthy younger and older
+participants. The older group demonstrated higher error rates, longer reaction times,
+significantly more inhibition failures, and late prosaccades as compared to young adults. The
+consequently lower ability of older adults to voluntarily inhibit saccadic responses has been
+interpreted as an indicator of age-related inhibitory control decline. Additionally, we
+performed a Bayesian model comparison of used computational models and concluded that
+the SERIA model explains our data better than PROSA that does not incorporate a late
+decision process.
+
+
+
+
+
+
+
 #### Triggers for the EEG/ET task
 40/41 - fixation period for PS/AS trial
 10/11 - PS trial left/right
