@@ -15,6 +15,7 @@ the task with computational models. We expanded previous findings by showing tha
 differences in reaction time and error rate can be explained by fast or slow inhibition and the
 probability of generating late voluntary prosaccades.
 
+![GitHub Logo](/Pictures/description.tiff)
 <img src="description.tiff" alt="drawing" width="2000"/>
 
 ###### Figure: (A) the experimental procedure of a single run, consisting of prosaccade task (PRO) and antisaccade task (ANTI) blocks, which each consisted of either 40 or 60 trials per block. There was a 1-min between each block. 
