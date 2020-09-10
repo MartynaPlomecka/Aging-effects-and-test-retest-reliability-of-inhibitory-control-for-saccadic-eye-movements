@@ -1,6 +1,6 @@
 
 
-*Repository for the registered report "Aging effects and test-retest reliability of inhibitory control for saccadic eye movements". *
+*Repository for the registered report "Aging effects and test-retest reliability of inhibitory control for saccadic eye movements".*
 
 OSF repository for this project: https://osf.io/4fu6r/, 
 manuscript: https://doi.org/10.1523/ENEURO.0459-19.2020 
