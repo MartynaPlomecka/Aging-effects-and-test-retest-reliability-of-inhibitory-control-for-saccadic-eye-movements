@@ -1,0 +1,252 @@
+---
+title: "tapas"
+author: "Martynka"
+date: "5/15/2020"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+
+```{r}
+bayes_list <- list()
+k = 1
+for (i in 1:100){
+    filename = sprintf("/Users/mplome/data/young_old/%d.csv", i)
+    bayes_list[[k]] <- read.csv(filename)
+    k = k+1
+}
+
+mergelist = do.call("rbind", bayes_list)
+```
+
+```{r}
+hist_late_pro_prob_ac_old = array(0,dim = c(1,100))
+for (i in 1:100){
+  temp_bayes = bayes_list[[i]]
+  hist_late_pro_prob_ac_old[i] = mean(temp_bayes[temp_bayes$conditions ==1 & temp_bayes$age ==1, "late_pro_prob"  ])
+  temp_bayes[temp_bayes$conditions ==1 & temp_bayes$age ==1, "late_pro_prob"  ]
+}
+hist(hist_late_pro_prob_ac_old, breaks = 10)
+hist(hist_late_pro_prob_ac_old, breaks = 50)
+quantile(hist_late_pro_prob_ac_old, prob =c(0.025, 0.975),na.rm = TRUE)
+```
+
+```{r}
+hist_inhib_fail_prob_ac_old = array(0,dim = c(1,100))
+for (i in 1:100){
+  temp_bayes = bayes_list[[i]]
+  hist_inhib_fail_prob_ac_old[i] = mean(temp_bayes[temp_bayes$conditions ==1 & temp_bayes$age ==1, "inhib_fail_prob"  ])
+  temp_bayes[temp_bayes$conditions ==1 & temp_bayes$age ==1, "inhib_fail_prob"  ]
+}
+hist(hist_inhib_fail_prob_ac_old, breaks = 10)
+quantile(hist_inhib_fail_prob_ac_old, prob =c(0.025, 0.975),na.rm = TRUE)
+```
+
+
+############################
+#######old SUBJECTS#########
+############################
+############################
+#######PROSACCADES##########
+############################
+```{r}
+hist_late_pro_prob_pc_old = array(0,dim = c(1,100))
+for (i in 1:100){
+  temp_bayes = bayes_list[[i]]
+  hist_late_pro_prob_pc_old[i] = mean(temp_bayes[temp_bayes$conditions ==2 & temp_bayes$age ==1, "late_pro_prob"  ])
+  temp_bayes[temp_bayes$conditions ==2 & temp_bayes$age ==1, "late_pro_prob"  ]
+}
+hist(hist_late_pro_prob_pc_old, breaks = 10)
+hist(hist_late_pro_prob_pc_old, breaks = 50)
+quantile(hist_late_pro_prob_pc_old, prob =c(0.025, 0.975), na.rm = TRUE)
+
+```
+
+```{r}
+hist_inhib_fail_prob_pc_old = array(0,dim = c(1,100))
+for (i in 1:100){
+  temp_bayes = bayes_list[[i]]
+  hist_inhib_fail_prob_pc_old[i] = mean(temp_bayes[temp_bayes$conditions ==2 & temp_bayes$age ==1, "inhib_fail_prob"  ])
+  temp_bayes[temp_bayes$conditions ==2 & temp_bayes$age ==1, "inhib_fail_prob"  ]
+}
+hist(hist_inhib_fail_prob_pc_old, breaks = 50)
+hist(hist_inhib_fail_prob_pc_old, breaks = 10)
+quantile(hist_inhib_fail_prob_pc_old, prob =c(0.025, 0.975), na.rm = TRUE)
+```
+
+```{r}
+
+hist_late_pro_rt_pc_old = array(0,dim = c(1,100))
+for (i in 1:100){
+  temp_bayes = bayes_list[[i]]
+  hist_late_pro_rt_pc_old[i] = mean(temp_bayes[temp_bayes$conditions ==2 & temp_bayes$age ==1, "late_pro_rt"  ])
+  temp_bayes[temp_bayes$conditions ==2 & temp_bayes$age ==1, "late_pro_rt"  ]
+}
+hist(hist_late_pro_rt_pc_old, breaks = 10)
+hist(hist_late_pro_rt_pc_old, breaks = 50)
+quantile(hist_late_pro_rt_pc_old, prob =c(0.025, 0.975), na.rm = TRUE)
+
+```
+
+```{r}
+hist_inhib_fail_rt_pc_old = array(0,dim = c(1,100))
+for (i in 1:100){
+  temp_bayes = bayes_list[[i]]
+  hist_inhib_fail_rt_pc_old[i] = mean(temp_bayes[temp_bayes$conditions ==2 & temp_bayes$age ==1, "inhib_fail_rt"  ])
+  temp_bayes[temp_bayes$conditions ==2 & temp_bayes$age ==1, "inhib_fail_rt"  ]
+}
+hist(hist_inhib_fail_rt_pc_old)
+hist(hist_inhib_fail_rt_pc_old, breaks = 50)
+quantile(hist_inhib_fail_rt_pc_old, prob =c(0.025, 0.975), na.rm = TRUE)
+which(hist_inhib_fail_rt_pc_old>1000)
+#hist(hist_inhib_fail_rt_pc_old[-59])
+```
+##############################
+#######young SUBJECTS#########
+##############################
+```{r}
+bayes_list <- list()
+k = 1
+for (i in 1:100){
+    filename = sprintf("/Users/mplome/data/young_old/%d.csv", i)
+    bayes_list[[k]] <- read.csv(filename)
+    k = k+1
+}
+```
+##############################
+#######ANTISACCADES###########
+##############################
+```{r}
+hist_late_pro_prob_ac = array(0,dim = c(1,100))
+for (i in 1:100){
+  temp_bayes = bayes_list[[i]]
+  hist_late_pro_prob_ac[i] = mean(temp_bayes[temp_bayes$conditions ==1 & temp_bayes$age ==0, "late_pro_prob"  ])
+  temp_bayes[temp_bayes$conditions ==1 & temp_bayes$age ==0, "late_pro_prob"  ]
+}
+#hist(hist_late_pro_prob_ac)
+quantile(hist_late_pro_prob_ac, prob =c(0.025, 0.975),na.rm = TRUE)
+```
+
+```{r}
+hist_inhib_fail_prob_ac = array(0,dim = c(1,100))
+for (i in 1:100){
+  temp_bayes = bayes_list[[i]]
+  hist_inhib_fail_prob_ac[i] = mean(temp_bayes[temp_bayes$conditions ==1 & temp_bayes$age ==0, "inhib_fail_prob"  ])
+  temp_bayes[temp_bayes$conditions ==1 & temp_bayes$age ==0, "inhib_fail_prob"  ]
+}
+hist(hist_inhib_fail_prob_ac)
+hist(hist_inhib_fail_prob_ac, breaks = 50)
+quantile(hist_inhib_fail_prob_ac, prob =c(0.025, 0.975),na.rm = TRUE)
+```
+
+###########################
+#######PROSACCADES#########
+###########################
+```{r}
+hist_late_pro_prob_pc = array(0,dim = c(1,100))
+for (i in 1:100){
+  temp_bayes = bayes_list[[i]]
+  hist_late_pro_prob_pc[i] = mean(temp_bayes[temp_bayes$conditions ==2 & temp_bayes$age ==0, "late_pro_prob"  ])
+  temp_bayes[temp_bayes$conditions ==2 & temp_bayes$age ==0, "late_pro_prob"  ]
+}
+hist(hist_late_pro_prob_pc)
+quantile(hist_late_pro_prob_pc, prob =c(0.025, 0.975), na.rm = TRUE)
+
+```
+
+```{r}
+hist_inhib_fail_prob_pc = array(0,dim = c(1,100))
+for (i in 1:100){
+  temp_bayes = bayes_list[[i]]
+  hist_inhib_fail_prob_pc[i] = mean(temp_bayes[temp_bayes$conditions ==2 & temp_bayes$age ==0, "inhib_fail_prob"  ])
+  temp_bayes[temp_bayes$conditions ==2 & temp_bayes$age ==0, "inhib_fail_prob"  ]
+}
+hist(hist_inhib_fail_prob_pc, breaks = 50)
+
+
+quantile(hist_inhib_fail_prob_pc, prob =c(0.025, 0.975), na.rm = TRUE)
+```
+
+```{r}
+
+hist_late_pro_rt_pc = array(0,dim = c(1,100))
+for (i in 1:100){
+  temp_bayes = bayes_list[[i]]
+  hist_late_pro_rt_pc[i] = mean(temp_bayes[temp_bayes$conditions ==2 & temp_bayes$age ==0, "late_pro_rt"  ])
+  temp_bayes[temp_bayes$conditions ==2 & temp_bayes$age ==0, "late_pro_rt"  ]
+}
+hist(hist_late_pro_rt_pc, breaks = 10)
+hist(hist_late_pro_rt_pc, breaks = 50)
+quantile(hist_late_pro_rt_pc, prob =c(0.025, 0.975), na.rm = TRUE)
+
+```
+
+```{r}
+hist_inhib_fail_rt_pc = array(0,dim = c(1,100))
+for (i in 1:100){
+  temp_bayes = bayes_list[[i]]
+  hist_inhib_fail_rt_pc[i] = mean(temp_bayes[temp_bayes$conditions ==2 & temp_bayes$age ==0, "inhib_fail_rt"  ])
+  temp_bayes[temp_bayes$conditions ==2 & temp_bayes$age ==0, "inhib_fail_rt"  ]
+}
+hist(hist_inhib_fail_rt_pc, breaks = 10)
+hist(hist_inhib_fail_rt_pc, breaks = 50)
+quantile(hist_inhib_fail_rt_pc, prob =c(0.025, 0.975), na.rm = TRUE)
+```
+
+
+
+########################
+#######BOXPLOTS#########
+########################
+
+
+
+```{r}
+a = data.frame(rt=t(hist_late_pro_prob_pc_old), age='old')
+b = data.frame(rt=t(hist_late_pro_prob_pc), age='young')
+data = rbind(a,b)
+boxplot(rt ~ age, data=data,  col = "plum2", main = "Late prosaccade probability PROSACCADE CONDITION ")
+```
+
+```{r}
+a = data.frame(rt=t(hist_late_pro_rt_pc_old), age='old')
+b = data.frame(rt=t(hist_late_pro_rt_pc), age='young')
+data = rbind(a,b)
+boxplot(rt ~ age, data=data,  col = "plum2", main = "Late prosaccade reaction time PROSACCADE CONDITION ")
+
+
+databest = data[data$rt<8,]
+boxplot(rt ~ age, data=databest,  col = "plum2", main = "Late prosaccade reaction time PROSACCADE CONDITION ", ylim = c(0,8))
+```
+
+```{r}
+
+
+b = data.frame(rt=t(hist_inhib_fail_prob_pc_old), age='old')
+a = data.frame(rt=t(hist_inhib_fail_prob_pc), age='young')
+data = rbind(a,b)
+boxplot(rt ~ age, data=data,  col = "plum2", main = "Inhibitory fail probability PROSACCADE CONDITION ")
+```
+
+```{r}
+a = data.frame(rt=t(hist_inhib_fail_rt_pc_old), age='old')
+b = data.frame(rt=t(hist_inhib_fail_rt_pc), age='young')
+data = rbind(a,b)
+boxplot(rt ~ age, data=data,  col = "plum2", main = "Inhibitory fail reaction time PROSACCADE CONDITION ")
+lm3 = lm(inhib_fail_rt ~ age , data = mergelist)
+summary(lm3)
+#plot(lm3)
+```
+
+```{r}
+b = data.frame(rt=t(hist_late_pro_prob_ac_old), age='old')
+a = data.frame(rt=t(hist_late_pro_prob_ac), age='young')
+data = rbind(a,b)
+
+boxplot(rt ~ age, data=data,  col = "plum2", main = "Late prosaccade probability AS CONDITION ")
+boxplot(rt ~ age, data=data,  col = "plum2", main = "Late prosaccade probability AS CONDITION ", ylim = c(0, 0.3))
+
+```
+
+
