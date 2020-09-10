@@ -16,7 +16,6 @@ differences in reaction time and error rate can be explained by fast or slow inh
 probability of generating late voluntary prosaccades.
 
 ![GitHub Logo](/Pictures/description.tiff)
-<img src="description.tiff" alt="drawing" width="2000"/>
 
 ###### Figure: (A) the experimental procedure of a single run, consisting of prosaccade task (PRO) and antisaccade task (ANTI) blocks, which each consisted of either 40 or 60 trials per block. There was a 1-min between each block. 
 ###### (B) Schematic top view of the experimental setup and gaze behavior during a prosaccade and antisaccade condition trial. The black square represents the target fixation, and the black dot represents the peripheral stimulus. The peripheral stimulus is presented 1000 ms on the screen and starts after a duration of the target fixation of 800-1200 ms.
