@@ -21,6 +21,7 @@ probability of generating late voluntary prosaccades.
 ###### (B) Schematic top view of the experimental setup and gaze behavior during a prosaccade and antisaccade condition trial. The black square represents the target fixation, and the black dot represents the peripheral stimulus. The peripheral stimulus is presented 1000 ms on the screen and starts after a duration of the target fixation of 800-1200 ms.
 ######  (C) The sequence of latent events assumed by the Stochastic Early Reaction, Inhibition and Late Action (SERIA) Model, generating as output either early prosaccades (EARLY PRO), late prosaccades (LATE PRO), or antisaccade events (LATE ANTI).
 
+### Study Description
 
 Neuropsychological studies indicate that healthy aging is associated with a decline of
 inhibitory control of attentional and behavioral systems. A widely accepted measure of
